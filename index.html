@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <script>
+            function calcAgeInputs() {
+                const childrenInput = document.getElementById("number-of-children");
+                const noOfElements = childrenInput.value;
+                console.log("noOfElements", noOfElements);
+                const paraMsg = document.createElement("p");
+                paraMsg.textContent = "Hi Again!";
+                document.body.appendChild(paraMsg);
+                }
+                /*const addLabel = document.createElement("label");
+                addLabel.for="age-of-children";
+                addLabel.textContent="Age of Children";
+                const addInput = document.createElement("input");
+                addInput.type = "number";
+                addInput.idName = "age-of-children"; 
+                addInput.name = "age-of-children";
+                addInput.required;
+                document.getElementById("age-of-children").appendChild(addLabel, addInput);
+                ;  // entered value for number of children
+             }
+            /*function calcPrice() {
+                const childrenInput = document.getElementById("number-of-children");
+                const totalPrice = document.getElementById("total-price");
+                totalPrice.textContent = "£" + (childrenInput.value*10).toFixed(2);}*/
+                   
+        </script>
+    </head>
+    <body>
+        <h1>Babysitter Calculator</h1>
+            <form name="form-a" action="#" onsubmit="calcAgeInputs()" class="calc-age-inputs">
+            <div class="number-of-children">
+              <label for="number-of-children">Number of Children:</label>
+              <input type="number" name="number-of-children" id="number-of-children" required>
+                <div class="next-button">
+                    <input type="submit" value="Next">
+                </div>
+            </div>
+          </form>
+          <form name="form-b" action="#" onsubmit="calcPrice" class="calc-price">
+                <div class="age-of-children">
+                <label for="age-of-children">Age of Children</label>
+                <input type="number" name="age-of-children" id="age-of-children" required>
+                    <div class="next-button-button">
+                        <input type="submit" value="Next">
+                    </div>
+                </div>
+        </form>
+        <form name="form-a" action="#" onsubmit="calcAgeInputs()" class="calc-age-inputs">
+            <div class="location">
+              <label for="location">Location:</label>
+              <input type="select" placeholder="City" name="location" id="location" required>
+                <div class="next-button">
+                    <input type="submit" value="Next">
+                </div>
+            </div>
+          </form>
+          <form name="form-a" action="#" onsubmit="calcAgeInputs()" class="calc-age-inputs">
+            <div class="age-of-sitter">
+              <label for="age-of-sitter">Age of Babysitter:</label>
+              <input type="number" name="age-of-sitter" id="age-of-sitter" required>
+                <div class="calculate-button">
+                    <input type="submit" value="Calculate!">
+                </div>
+            </div>
+          </form>   
+          <div>
+              <p>Price per Hour:</p>
+              <p id="total-price">£0.00</p>
+          </div>
+    </body>
+</html>

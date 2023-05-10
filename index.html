@@ -1,48 +1,73 @@
-<html>
-    <head>
-    </head>
-    <body>
-        <h1>Babysitter Calculator</h1>
-            <form name="form-a" action="#" onsubmit="genAgeValue(), createNewElement()" class="calc-age-inputs">
-            <div class="number-of-children">
-              <label for="number-of-children">Number of Children:</label>
-              <input type="number" name="number-of-children" id="number-of-children" required>
-                <div class="next-button">
-                    <input type="submit" value="Next">
-                </div>
-            </div>
-          </form>
-          <form name="form-b" action="#" onsubmit="#" class="calc-price">
-                <div class="age-of-children">
-                <label for="age-of-children">Age of Children</label>
-                <input type="number" name="age-of-children" id="age-of-children" required>
-                    <div class="next-button-button">
-                        <input type="submit" value="Next">
-                    </div>
-                </div>
-        </form>
-        <form name="form-a" action="#" onsubmit="#" class="calc-age-inputs">
-            <div class="location">
-              <label for="location">Location:</label>
-              <input type="select" placeholder="City" name="location" id="location" required>
-                <div class="next-button">
-                    <input type="submit" value="Next">
-                </div>
-            </div>
-          </form>
-          <form name="form-a" action="#" onsubmit="#" class="calc-age-inputs">
-            <div class="age-of-sitter">
-              <label for="age-of-sitter">Age of Babysitter:</label>
-              <input type="number" name="age-of-sitter" id="age-of-sitter" required>
-                <div class="calculate-button">
-                    <input type="submit" value="Calculate!">
-                </div>
-            </div>
-          </form>   
-          <div>
-              <p>Price per Hour:</p>
-              <p id="total-price">£0.00</p>
-          </div>
-          <script src="script.js""></script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+</head>
+<body>
+  <h1>Babysitter Calculator</h1>
+
+    <!-- Number of Children Entry-->
+    <div id="number-of-children">
+      <form id="calc-age-inputs" action="#" onsubmit="genAgeValue(), createNewElement()" >
+        <label for="number-of-children">Number of Children:</label>
+        <input id="X" type="number"  required>
+            
+        <div id="next-button">
+          <input type="submit" value="Enter">
+        </div>
+      
+      </form>
+    </div>
+    
+    <!-- Age of Children Entry-->
+    <div id="age-of-children">
+      <form id="calc-price" action="#" onsubmit="#">
+        <label for="age-of-children">Age of Children</label>
+        <input id="input-age-of-children" type="number" required>
+                    
+        <div id="next-button">
+          <input type="submit" value="Next">
+        </div>
+
+      </form>
+    </div>
+     
+    <!-- Location Entry-->
+    <div id="location">
+      <form id="calc-price" action="#" onsubmit="#">
+        <label for="location">Location:</label>
+        <input id="location" type="select" placeholder="City/Suburb/Rural" name="location"  required>
+                
+        <div class="next-button">
+          <input type="submit" value="Next">
+        </div>
+      
+      </form>
+    </div>
+        
+     <!-- Age of Babysitter Entry-->
+     <div id="age-of-sitter">
+      <form id="calc-price" action="#" onsubmit="#">
+       <label for="age-of-sitter">Age of Babysitter:</label>
+       <input id="age-of-sitter" type="number" required>
+      </form> 
+    </div>
+
+    <!-- Calculate Hourly Rate-->
+
+    <div id="calc-button">
+      <input type="submit" value="Calculate!">
+    </div>
+    
+    <div>
+      <p>Price per Hour:</p>
+      <p id="total-price">£0.00</p>
+    </div>
+          
+    
+    <script src="script.js""></script>
     </body>
 </html>

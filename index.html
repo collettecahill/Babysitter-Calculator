@@ -9,63 +9,50 @@
 <body>
   <h1>Babysitter Calculator</h1>
 
-    <!-- Number of Children Entry-->
-    <div id="number-of-children">
-      <form id="calc-age-inputs" action="#" onsubmit="genAgeValue(), createNewElement()" >
-        <label for="number-of-children">Number of Children:</label>
-        <input id="X" type="number"  required>
-            
-        <div id="next-button">
-          <input type="submit" value="Enter">
-        </div>
-      
-      </form>
-    </div>
+  <form id="calc-hourly-rate" action="#">
     
+  <!-- Number of Children Entry-->
+    <div>
+        <label for="number-of-children">Number of Children:</label>
+        <input id="number-of-children" type="number">
+        <button type="button">Enter</button>
+    </div>
+      
     <!-- Age of Children Entry-->
-    <div id="age-of-children">
-      <form id="calc-price" action="#" onsubmit="#">
+    <div>
         <label for="age-of-children">Age of Children</label>
-        <input id="input-age-of-children" type="number" required>
-                    
-        <div id="next-button">
-          <input type="submit" value="Next">
-        </div>
-
-      </form>
+        <input id="age-of-children" type="number" required>
+        <button type="button">Enter</button>
     </div>
      
     <!-- Location Entry-->
-    <div id="location">
-      <form id="calc-price" action="#" onsubmit="#">
-        <label for="location">Location:</label>
-        <input id="location" type="select" placeholder="City/Suburb/Rural" name="location"  required>
-                
-        <div class="next-button">
-          <input type="submit" value="Next">
-        </div>
-      
-      </form>
+    <div>
+        <p>Choose One</p>
+        <label for="city">City</label>
+        <input id="city" type="radio" placeholder="City" name="location">
+        <label for="suburb">Suburb</label>
+        <input id="suburb" type="radio" placeholder="Suburb" name="location">
+        <label for="rural">Rural</label>
+        <input id="rural" type="radio" placeholder="Rural" name="location">
     </div>
         
      <!-- Age of Babysitter Entry-->
-     <div id="age-of-sitter">
-      <form id="calc-price" action="#" onsubmit="#">
+     <div>
        <label for="age-of-sitter">Age of Babysitter:</label>
        <input id="age-of-sitter" type="number" required>
-      </form> 
     </div>
 
     <!-- Calculate Hourly Rate-->
 
-    <div id="calc-button">
-      <input type="submit" value="Calculate!">
+    <div>
+      <input type="submit" value="CALCULATE!">
     </div>
     
     <div>
       <p>Price per Hour:</p>
       <p id="total-price">£0.00</p>
     </div>
+</form>
           
     
     <script src="script.js""></script>

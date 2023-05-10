@@ -1,15 +1,6 @@
 
 //Capture the value for age entry inputs  
 
-function genAgeValue() {
-    let childrenInput = document.getElementById("X")
-    let noOfElements = childrenInput.value
-    console.log(noOfElements)
-    if (noOfElements >= 2) {
-        let newElement = document.getElementById("input-age-of-children")
-        newElement.insertAdjacentHTML("afterend", "<p>test</p>")
-    }
-}
 
 //Create age entry input for 'age of children' 
 
@@ -21,8 +12,9 @@ function createNewElement() {
     addInput.type = "number"
     addInput.idName = "age-of-children" 
     addInput.required
+    console.log(addLabel)
 
-    document.getElementById("age-of-children").appendChild(addLabel, addInput)
+    // document.getElementById("age-of-children").appendChild(addLabel, addInput)
     
 }
 
@@ -38,3 +30,15 @@ function calcPrice() {
     const totalPrice = document.getElementById("total-price")
     totalPrice.textContent = "£" + (childrenInput.value*10).toFixed(2)
 }
+
+const myButton = document.querySelector("#number-of-children + button");
+console.log(myButton)
+myButton.addEventListener("click", () => {
+    let childrenInput = document.getElementById("number-of-children")
+    let noOfElements = childrenInput.value
+    if (noOfElements >= 2) {
+        let newElement = document.getElementById("age-of-children")
+        const createNew = createNewElement()
+        newElement.insertAdjacentHTML("afterend", createNew)
+    }
+})
